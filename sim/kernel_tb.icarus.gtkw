@@ -1,0 +1,38 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Sun Sep 27 02:11:08 2020
+[*]
+[dumpfile] "C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\.dvb-build\simulation\kernel-icarus\dump.fst"
+[dumpfile_mtime] "Sun Sep 27 02:07:45 2020"
+[dumpfile_size] 1722
+[savefile] "C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\sim\kernel_tb.icarus.gtkw"
+[timestart] 0
+[size] 1920 1017
+[pos] -191 -191
+*-12.057935 5710 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top_wrapper.
+[treeopen] top_wrapper.kernel_tb_instance.
+[sst_width] 197
+[signals_width] 170
+[sst_expanded] 1
+[sst_vpaned_height] 300
+@800022
+top_wrapper.kernel_tb_instance.uut.neighbors[7:0]
+@28
+(0)top_wrapper.kernel_tb_instance.uut.neighbors[7:0]
+(1)top_wrapper.kernel_tb_instance.uut.neighbors[7:0]
+(2)top_wrapper.kernel_tb_instance.uut.neighbors[7:0]
+(3)top_wrapper.kernel_tb_instance.uut.neighbors[7:0]
+(4)top_wrapper.kernel_tb_instance.uut.neighbors[7:0]
+(5)top_wrapper.kernel_tb_instance.uut.neighbors[7:0]
+(6)top_wrapper.kernel_tb_instance.uut.neighbors[7:0]
+(7)top_wrapper.kernel_tb_instance.uut.neighbors[7:0]
+@200
+-
+@1001200
+-group_end
+@28
+top_wrapper.kernel_tb_instance.uut.cell_cur
+top_wrapper.kernel_tb_instance.uut.cell_new
+[pattern_trace] 1
+[pattern_trace] 0

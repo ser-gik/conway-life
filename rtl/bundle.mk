@@ -1,0 +1,9 @@
+
+include $(DVB_BUNDLE_BEGIN)
+DVB_NAME := life
+DVB_LIBDIRS := ./
+DVB_INCDIRS := ./
+DVB_DEFINES :=
+DVB_REQUIRED :=
+include $(DVB_BUNDLE_END)
+

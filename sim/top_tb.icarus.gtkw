@@ -1,0 +1,176 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Tue Sep 29 06:12:11 2020
+[*]
+[dumpfile] "C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\.dvb-build\simulation\top-icarus\dump.fst"
+[dumpfile_mtime] "Tue Sep 29 06:00:55 2020"
+[dumpfile_size] 4629
+[savefile] "C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\sim\top_tb.icarus.gtkw"
+[timestart] 0
+[size] 1366 705
+[pos] -9 -9
+*-19.534090 2957450 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top_wrapper.
+[treeopen] top_wrapper.top_tb_instance.
+[treeopen] top_wrapper.top_tb_instance.uut.
+[sst_width] 197
+[signals_width] 333
+[sst_expanded] 1
+[sst_vpaned_height] 277
+@28
+top_wrapper.top_tb_instance.clk
+top_wrapper.top_tb_instance.reset
+@800200
+-*** ARENA ***
+@29
+top_wrapper.top_tb_instance.uut.u_arena.\RAM[0][35:0]
+top_wrapper.top_tb_instance.uut.u_arena.\RAM[1][35:0]
+@c00029
+top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+@29
+(0)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(1)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(2)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(3)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(4)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(5)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(6)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(7)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(8)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(9)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(10)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(11)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(12)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(13)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(14)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(15)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(16)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(17)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(18)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(19)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(20)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(21)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(22)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(23)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(24)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(25)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(26)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(27)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(28)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(29)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(30)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(31)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(32)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(33)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(34)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+(35)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
+@1401209
+-group_end
+@29
+top_wrapper.top_tb_instance.uut.u_arena.\RAM[3][35:0]
+@c00029
+top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+@29
+(0)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(1)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(2)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(3)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(4)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(5)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(6)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(7)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(8)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(9)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(10)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(11)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(12)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(13)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(14)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(15)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(16)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(17)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(18)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(19)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(20)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(21)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(22)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(23)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(24)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(25)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(26)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(27)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(28)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(29)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(30)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(31)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(32)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(33)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(34)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+(35)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
+@1401209
+-group_end
+@c00029
+top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+@29
+(0)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(1)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(2)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(3)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(4)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(5)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(6)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(7)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(8)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(9)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(10)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(11)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(12)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(13)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(14)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(15)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(16)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(17)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(18)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(19)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(20)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(21)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(22)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(23)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(24)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(25)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(26)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(27)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(28)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(29)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(30)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(31)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(32)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(33)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(34)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+(35)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
+@1401209
+-group_end
+@29
+top_wrapper.top_tb_instance.uut.u_arena.\RAM[6][35:0]
+top_wrapper.top_tb_instance.uut.u_arena.\RAM[7][35:0]
+top_wrapper.top_tb_instance.uut.u_arena.\RAM[8][35:0]
+top_wrapper.top_tb_instance.uut.u_arena.\RAM[9][35:0]
+@1000200
+-*** ARENA ***
+@800200
+-*** UUT PORTS ***
+@2028
+^1 C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\sim\top_tb.CMD.alias
+top_wrapper.top_tb_instance.cmd[2:0]
+@22
+top_wrapper.top_tb_instance.cmd_arg0[31:0]
+@28
+top_wrapper.top_tb_instance.cmd_ready
+@22
+top_wrapper.top_tb_instance.cmd_res[31:0]
+@28
+top_wrapper.top_tb_instance.cmd_valid
+@1000200
+-*** UUT PORTS ***
+[pattern_trace] 1
+[pattern_trace] 0

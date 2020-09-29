@@ -1,0 +1,3 @@
+[submodule "external/dvb"]
+	path = external/dvb
+	url = git@github.com:ser-gik/dvb.git
