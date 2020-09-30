@@ -1,31 +1,31 @@
 [*]
 [*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
-[*] Tue Sep 29 06:12:11 2020
+[*] Wed Sep 30 01:46:07 2020
 [*]
 [dumpfile] "C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\.dvb-build\simulation\top-icarus\dump.fst"
-[dumpfile_mtime] "Tue Sep 29 06:00:55 2020"
+[dumpfile_mtime] "Wed Sep 30 01:44:51 2020"
 [dumpfile_size] 4629
 [savefile] "C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\sim\top_tb.icarus.gtkw"
 [timestart] 0
-[size] 1366 705
-[pos] -9 -9
-*-19.534090 2957450 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 1920 1017
+[pos] -87 -87
+*-18.762938 2929030 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top_wrapper.
 [treeopen] top_wrapper.top_tb_instance.
 [treeopen] top_wrapper.top_tb_instance.uut.
 [sst_width] 197
 [signals_width] 333
 [sst_expanded] 1
-[sst_vpaned_height] 277
+[sst_vpaned_height] 437
 @28
 top_wrapper.top_tb_instance.clk
 top_wrapper.top_tb_instance.reset
 @800200
 -*** ARENA ***
-@29
+@23
 top_wrapper.top_tb_instance.uut.u_arena.\RAM[0][35:0]
 top_wrapper.top_tb_instance.uut.u_arena.\RAM[1][35:0]
-@c00029
+@c00023
 top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
 @29
 (0)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
@@ -64,11 +64,11 @@ top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
 (33)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
 (34)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
 (35)top_wrapper.top_tb_instance.uut.u_arena.\RAM[2][35:0]
-@1401209
+@1401203
 -group_end
-@29
+@23
 top_wrapper.top_tb_instance.uut.u_arena.\RAM[3][35:0]
-@c00029
+@c00023
 top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
 @29
 (0)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
@@ -107,9 +107,9 @@ top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
 (33)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
 (34)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
 (35)top_wrapper.top_tb_instance.uut.u_arena.\RAM[4][35:0]
-@1401209
+@1401203
 -group_end
-@c00029
+@c00023
 top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
 @29
 (0)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
@@ -148,9 +148,9 @@ top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
 (33)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
 (34)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
 (35)top_wrapper.top_tb_instance.uut.u_arena.\RAM[5][35:0]
-@1401209
+@1401203
 -group_end
-@29
+@23
 top_wrapper.top_tb_instance.uut.u_arena.\RAM[6][35:0]
 top_wrapper.top_tb_instance.uut.u_arena.\RAM[7][35:0]
 top_wrapper.top_tb_instance.uut.u_arena.\RAM[8][35:0]

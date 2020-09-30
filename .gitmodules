@@ -1,3 +1,6 @@
 [submodule "external/dvb"]
 	path = external/dvb
 	url = git@github.com:ser-gik/dvb.git
+[submodule "external/rtl-reusables"]
+	path = external/rtl-reusables
+	url = git@github.com:ser-gik/rtl-reusables.git
