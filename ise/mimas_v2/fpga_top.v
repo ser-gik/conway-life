@@ -6,6 +6,7 @@ module fpga_top (
     output UART_RX,
 
     input [5:0] Switch,
+    input [7:0] DPSwitch,
 
     output [7:0] LED,
     
@@ -16,15 +17,21 @@ module fpga_top (
     output VSync,
     output [2:0] Red,
     output [2:0] Green,
-    output [2:1] Blue,
+    output [2:1] Blue
 );
-    localparam ARENA_WIDTH = 36;
-    localparam ARENA_HEIGHT = 30;
+    localparam ARENA_WIDTH = 160;
+    localparam ARENA_HEIGHT = 90;
 
     wire clk;
+    wire vga_clk;
     wire reset;
 
-    assign clk = CLK_100MHz;
+    vga_clk_gen u_vga_clk_gen(
+        .CLK_IN1(CLK_100MHz),
+        .CLK_OUT1(vga_clk),
+        .CLK_OUT2(clk)
+    );
+
     assign reset = ~Switch[0];
 
     wire arena_clk;
@@ -36,8 +43,9 @@ module fpga_top (
         .ARENA_WIDTH(ARENA_WIDTH),
         .ARENA_HEIGHT(ARENA_HEIGHT)
     ) u_vga_image (
-        .clk(clk),
+        .clk(vga_clk),
         .reset(reset),
+        .grid_enable(DPSwitch[0]),
         .arena_clk(arena_clk),
         .arena_row_select(arena_row),
         .arena_column_select(arena_column),
@@ -79,8 +87,10 @@ module fpga_top (
     );
 
     assign LED = {7'b0, ~cmd_ready};
-    assign SevenSegment = 8'b0;
-    assign SevenSegmentEnable = 3'b0;
+    assign SevenSegment = 8'b11111111;
+    assign SevenSegmentEnable = 3'b111;
+
+    assign UART_RX = 1'b1;
 
 endmodule
 

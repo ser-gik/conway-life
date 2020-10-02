@@ -18,7 +18,7 @@ module cmd_gen(
         .WIDTH(4),
         .SAMPLES_COUNT(5),
         .TICKS_PER_SAMPLE(1_000_000)
-    ) subject (
+    ) u_switch_debouncer (
         .in(buttons),
         .out(buttons_debounced),
         .clk(clk),
@@ -40,6 +40,16 @@ module cmd_gen(
         end
     endgenerate
 
+    reg [31:0] seed;
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            seed <= 32'b0;
+        end
+        else begin
+            seed <= seed + 1'b1;
+        end
+    end
 
     reg [2:0] cmd_reg;
     reg [31:0] cmd_arg0_reg;
@@ -51,7 +61,8 @@ module cmd_gen(
         cmd_valid_reg = 1'b0;
         case (buttons_pulsed)
             4'b0001: begin
-                cmd_reg = `CMD_IDLE;
+                cmd_reg = `CMD_SEED;
+                cmd_arg0_reg = 32'h000_0000;
                 cmd_valid_reg = 1'b1;
             end
             4'b0010: begin
@@ -65,7 +76,7 @@ module cmd_gen(
             end
             4'b1000: begin
                 cmd_reg = `CMD_SEED;
-                cmd_arg0_reg = 32'hcafebabe;
+                cmd_arg0_reg = seed;
                 cmd_valid_reg = 1'b1;
             end
             default: begin
@@ -75,7 +86,7 @@ module cmd_gen(
 
     assign cmd = cmd_reg;
     assign cmd_arg0 = cmd_arg0_reg;
-    assign cmd_valid_reg = cmd_valid;
+    assign cmd_valid = cmd_valid_reg;
 
 endmodule
 

@@ -1,3 +1,6 @@
-build/
-iseconfig/
+/build
+/iseconfig
+*.swp
+_xmsgs/
+*.gise
 

@@ -1,8 +1,6 @@
 
 `include "command.vh"
 
-`default_nettype none
-
 module top #(
     parameter ARENA_WIDTH = 10,
     parameter ARENA_HEIGHT = 10

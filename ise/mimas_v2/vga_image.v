@@ -6,6 +6,8 @@ module vga_image #(
     input clk,
     input reset,
 
+    input grid_enable,
+
     output arena_clk,
     output [7:0] arena_row_select,
     output [7:0] arena_column_select,
@@ -16,18 +18,13 @@ module vga_image #(
 
     output [7:0] RGB_332
 );
-
-    wire vga_clk;
-
-
-
-
-
-    assign arena_clk = vga_clk;
+    assign arena_clk = clk;
 
     wire[10:0] pixel_x;
     wire[9:0] pixel_y;
     wire pixel_visible;
+    wire hsync_raw;
+    wire vsync_raw;
 
     vga_sync_generator #(
         .HSIZE(1280),
@@ -41,17 +38,23 @@ module vga_image #(
         .VBPORCH(20),
         .VSYNC_POSITIVE(1)
     ) u_vga_sync_generator (
-    .pixel_clk(vga_clk),
-    .reset_n(~reset),
-    .hsync(HSync),
-    .vsync(VSync),
-    .pixel_x(pixel_x),
-    .pixel_y(pixel_y),
-    .line_start(),
-    .frame_start(),
-    .pixel_visible(pixel_visible)
+        .pixel_clk(clk),
+        .reset_n(~reset),
+        .hsync(hsync_raw),
+        .vsync(vsync_raw),
+        .pixel_x(pixel_x),
+        .pixel_y(pixel_y),
+        .pixel_visible(pixel_visible)
     );
 
+    reg HSync;
+    reg VSync;
+    always @(posedge clk) begin
+        HSync <= hsync_raw;
+        VSync <= vsync_raw;
+    end
+
+    // Each cell is drawn as a 8x8 pixels square
     assign arena_column_select = pixel_x[10:3];
     assign arena_row_select = {1'b0, pixel_y[9:3]};
 
@@ -61,9 +64,22 @@ module vga_image #(
                     && arena_row_select < ARENA_HEIGHT;
 
     wire is_grid;
-    assign is_grid = pixel_x[2:0] == 3'b000 && pixel_y[2:0] == 3'b000;
+    // 1-pixel wide grid lines
+    assign is_grid = pixel_x[2:0] == 3'b000 || pixel_y[2:0] == 3'b000;
 
-    assign RGB_332 = is_arena ? (is_grid ? 8'b00011100 : 8'b00000011) : 8'b00000000;
+    reg [7:0] RGB_332;
+
+    always @(*) begin
+        RGB_332 = 8'b000000;
+        if (is_arena) begin
+            if (grid_enable && is_grid) begin
+                RGB_332 = 8'b00011100;
+            end
+            else if (arena_cell_value) begin
+                RGB_332 = 8'b00000011;
+            end
+        end
+    end
 
 endmodule
 

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <header>
+    <!-- ISE source project file created by Project Navigator.             -->
+    <!--                                                                   -->
+    <!-- This file contains project source information including a list of -->
+    <!-- project source files, project and process properties.  This file, -->
+    <!-- along with the project source files, is sufficient to open and    -->
+    <!-- implement in ISE Project Navigator.                               -->
+    <!--                                                                   -->
+    <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+  </header>
+
+  <version xil_pn:ise_version="14.7" xil_pn:schema_version="2"/>
+
+  <files>
+    <file xil_pn:name="../../rtl/agent_selector.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
+    </file>
+    <file xil_pn:name="../../rtl/arena.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
+    </file>
+    <file xil_pn:name="../../rtl/cell_reader.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="3"/>
+    </file>
+    <file xil_pn:name="../../rtl/idler.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="4"/>
+    </file>
+    <file xil_pn:name="../../rtl/kernel.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="5"/>
+    </file>
+    <file xil_pn:name="../../rtl/mux_4x1.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="6"/>
+    </file>
+    <file xil_pn:name="../../rtl/seeder.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="7"/>
+    </file>
+    <file xil_pn:name="../../rtl/solver.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="8"/>
+    </file>
+    <file xil_pn:name="../../rtl/top.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="9"/>
+    </file>
+    <file xil_pn:name="../../external/rtl-reusables/rtl/7segment/binary_to_bcd_transcoder.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="11"/>
+    </file>
+    <file xil_pn:name="../../external/rtl-reusables/rtl/7segment/_7segment_display_driver.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="12"/>
+    </file>
+    <file xil_pn:name="../../external/rtl-reusables/rtl/misc/bit_reverser.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="13"/>
+    </file>
+    <file xil_pn:name="../../external/rtl-reusables/rtl/misc/prbs_gen.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="14"/>
+    </file>
+    <file xil_pn:name="../../external/rtl-reusables/rtl/misc/switch_debouncer.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="15"/>
+    </file>
+    <file xil_pn:name="../../external/rtl-reusables/rtl/uart_8n1/uart_8n1.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="16"/>
+    </file>
+    <file xil_pn:name="../../external/rtl-reusables/rtl/uart_8n1/uart_8n1_clock_gen.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="17"/>
+    </file>
+    <file xil_pn:name="../../external/rtl-reusables/rtl/uart_8n1/uart_8n1_receiver.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="19"/>
+    </file>
+    <file xil_pn:name="../../external/rtl-reusables/rtl/uart_8n1/uart_8n1_transmitter.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="20"/>
+    </file>
+    <file xil_pn:name="../../external/rtl-reusables/rtl/vga/fontrom_16x32__xos4_Terminus_Medium_R_Normal__32_320_72_72_C_160_ISO10646_1.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="21"/>
+    </file>
+    <file xil_pn:name="../../external/rtl-reusables/rtl/vga/vga_sync_generator.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="Implementation" xil_pn:seqID="22"/>
+    </file>
+  </files>
+
+  <properties>
+    <property xil_pn:name="Device" xil_pn:value="xc6slx9" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Device Family" xil_pn:value="Spartan6" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top" xil_pn:value="Module|top" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top File" xil_pn:value="../../rtl/top.v" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/top" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Package" xil_pn:value="csg324" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Preferred Language" xil_pn:value="Verilog" xil_pn:valueState="default"/>
+    <property xil_pn:name="Property Specification in Project File" xil_pn:value="Store all values" xil_pn:valueState="default"/>
+    <property xil_pn:name="Simulator" xil_pn:value="ISim (VHDL/Verilog)" xil_pn:valueState="default"/>
+    <property xil_pn:name="Speed Grade" xil_pn:value="-3" xil_pn:valueState="default"/>
+    <property xil_pn:name="Synthesis Tool" xil_pn:value="XST (VHDL/Verilog)" xil_pn:valueState="default"/>
+    <property xil_pn:name="Top-Level Source Type" xil_pn:value="HDL" xil_pn:valueState="default"/>
+    <property xil_pn:name="Verilog Include Directories" xil_pn:value="../../rtl/|../../external/rtl-reusables/rtl/uart_8n1" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Working Directory" xil_pn:value="." xil_pn:valueState="non-default"/>
+    <!--                                                                                  -->
+    <!-- The following properties are for internal use only. These should not be modified.-->
+    <!--                                                                                  -->
+    <property xil_pn:name="PROP_DesignName" xil_pn:value="conway-game-of-life" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_DevFamilyPMName" xil_pn:value="spartan6" xil_pn:valueState="default"/>
+    <property xil_pn:name="PROP_intProjectCreationTimestamp" xil_pn:value="2020-09-30T03:31:57" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_intWbtProjectID" xil_pn:value="ED435FA6FF0EC4D946BBBA776FC1B29A" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_intWorkingDirLocWRTProjDir" xil_pn:value="Same" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_intWorkingDirUsed" xil_pn:value="No" xil_pn:valueState="non-default"/>
+  </properties>
+
+  <bindings/>
+
+  <libraries/>
+
+  <autoManagedFiles>
+    <!-- The following files are identified by `include statements in verilog -->
+    <!-- source files and are automatically managed by Project Navigator.     -->
+    <!--                                                                      -->
+    <!-- Do not hand-edit this section, as it will be overwritten when the    -->
+    <!-- project is analyzed based on files automatically identified as       -->
+    <!-- include files.                                                       -->
+    <file xil_pn:name="../../external/rtl-reusables/rtl/uart_8n1/uart_8n1.vh" xil_pn:type="FILE_VERILOG"/>
+    <file xil_pn:name="../../rtl/command.vh" xil_pn:type="FILE_VERILOG"/>
+  </autoManagedFiles>
+
+</project>

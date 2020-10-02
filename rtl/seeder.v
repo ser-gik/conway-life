@@ -36,7 +36,12 @@ module seeder #(
 
     always @(*) begin
         state_next = state;
-        lfsr_next = {lfsr[30:0], lfsr[31]}; // TODO cyclic shift for test purposes
+`ifdef __ICARUS__
+        // Cyclic shift for simulation.
+        lfsr_next = {lfsr[30:0], lfsr[31]};
+`else
+        lfsr_next = {lfsr[30:0], lfsr[28] ^ lfsr[18]};
+`endif
         cur_row_next = cur_row;
         cur_column_next = cur_column;
         row_write = 1'b0;
@@ -85,7 +90,7 @@ module seeder #(
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            lfsr_next <= 32'b0;
+            lfsr <= 32'b0;
         end
         else begin
             lfsr <= lfsr_next;
