@@ -1,0 +1,73 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Sat Oct 03 03:37:08 2020
+[*]
+[dumpfile] "C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\.dvb-build\simulation\solver-icarus\dump.fst"
+[dumpfile_mtime] "Sat Oct 03 03:36:38 2020"
+[dumpfile_size] 1320
+[savefile] "C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\sim\solver_tb.icarus.gtkw"
+[timestart] 0
+[size] 1920 1017
+[pos] -35 -35
+*-13.785578 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top_wrapper.
+[treeopen] top_wrapper.solver_tb_instance.
+[sst_width] 197
+[signals_width] 300
+[sst_expanded] 1
+[sst_vpaned_height] 300
+@c00200
+-TB
+@22
+top_wrapper.solver_tb_instance.arena_columns[9:0]
+@28
+top_wrapper.solver_tb_instance.clk
+@22
+top_wrapper.solver_tb_instance.generations_count[31:0]
+@28
+top_wrapper.solver_tb_instance.ready
+top_wrapper.solver_tb_instance.reset
+top_wrapper.solver_tb_instance.start
+@1401200
+-TB
+@c00201
+-RAM
+@22
+top_wrapper.solver_tb_instance.u_arena.\RAM[0][9:0]
+top_wrapper.solver_tb_instance.u_arena.\RAM[1][9:0]
+top_wrapper.solver_tb_instance.u_arena.\RAM[2][9:0]
+top_wrapper.solver_tb_instance.u_arena.\RAM[3][9:0]
+top_wrapper.solver_tb_instance.u_arena.\RAM[4][9:0]
+top_wrapper.solver_tb_instance.u_arena.\RAM[5][9:0]
+top_wrapper.solver_tb_instance.u_arena.\RAM[6][9:0]
+top_wrapper.solver_tb_instance.u_arena.\RAM[7][9:0]
+top_wrapper.solver_tb_instance.u_arena.\RAM[8][9:0]
+top_wrapper.solver_tb_instance.u_arena.\RAM[9][9:0]
+@1401201
+-RAM
+@800200
+-UUT
+@22
+top_wrapper.solver_tb_instance.uut.arena_columns[9:0]
+top_wrapper.solver_tb_instance.uut.arena_columns_new[9:0]
+@28
+top_wrapper.solver_tb_instance.uut.arena_columns_write
+@22
+top_wrapper.solver_tb_instance.uut.arena_row_select[7:0]
+@28
+top_wrapper.solver_tb_instance.uut.busy
+top_wrapper.solver_tb_instance.uut.busy_next
+top_wrapper.solver_tb_instance.uut.clk
+@22
+top_wrapper.solver_tb_instance.uut.generations_count[31:0]
+@28
+top_wrapper.solver_tb_instance.uut.ready
+top_wrapper.solver_tb_instance.uut.reset
+top_wrapper.solver_tb_instance.uut.start
+@22
+top_wrapper.solver_tb_instance.uut.ticks[3:0]
+top_wrapper.solver_tb_instance.uut.ticks_next[3:0]
+@1000200
+-UUT
+[pattern_trace] 1
+[pattern_trace] 0

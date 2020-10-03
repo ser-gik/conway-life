@@ -35,11 +35,11 @@ module solver #(
                 end
             end
             1'b1: begin
-                if (ticks_next == 4'b1111) begin
+                if (ticks == 4'b1111) begin
                     busy_next = 1'b0;
                 end
                 else begin
-                    busy_next = 1'b1
+                    busy_next = 1'b1;
                     ticks_next = ticks + 1'b1;
                 end
             end

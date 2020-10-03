@@ -1,7 +1,7 @@
 
 `timescale 1ns/100ps
 
-module cell_reader_tb;
+module solver_tb;
     reg [1:8*128] memories_directory;
     initial begin
         if ($value$plusargs("MEMORIES_DIR+%s", memories_directory)) begin
@@ -20,6 +20,8 @@ module cell_reader_tb;
 
     wire [7:0] arena_row_select;
     wire [9:0] arena_columns;
+    wire [9:0] arena_columns_new;
+    wire arena_write;
 
     arena #(
         .WIDTH(ARENA_WIDTH),
@@ -30,24 +32,16 @@ module cell_reader_tb;
         .a_columns_out(),
         .b_clk(clk),
         .b_row(arena_row_select),
-        .b_columns_in({ARENA_WIDTH{1'b0}}),
+        .b_columns_in(arena_columns_new),
         .b_columns_out(arena_columns),
-        .b_write(1'b0)
+        .b_write(arena_write)
     );
 
     reg start;
     wire ready;
-    reg [7:0] cell_column;
-    reg [7:0] cell_row;
-    wire cell_value;
+    reg [31:0] generations_count;
 
-    reg cell_registered;
-
-    always @(posedge clk) begin
-        cell_registered <= cell_value;
-    end
-
-    cell_reader #(
+    solver #(
         .ARENA_WIDTH(ARENA_WIDTH),
         .ARENA_HEIGHT(ARENA_HEIGHT)
     ) uut (
@@ -55,11 +49,11 @@ module cell_reader_tb;
         .reset(reset),
         .start(start),
         .ready(ready),
-        .cell_column(cell_column),
-        .cell_row(cell_row),
-        .cell_value(cell_value),
+        .generations_count(generations_count),
         .arena_row_select(arena_row_select),
-        .arena_columns(arena_columns)
+        .arena_columns(arena_columns),
+        .arena_columns_new(arena_columns_new),
+        .arena_columns_write(arena_write)
     );
 
     integer i;
@@ -72,16 +66,12 @@ module cell_reader_tb;
         @(posedge clk);
         reset = 1'b0;
 
-        cell_column = 8'd3;
-        cell_row = 8'd0;
-        for (i = 0; i < 10; i = i + 1) begin
-            @(posedge clk);
-            start = 1'b1;
-            @(posedge clk);
-            start = 1'b0;
-            repeat(4) @(posedge clk);
-            cell_row = cell_row + 8'd1;
-        end
+        generations_count = 32'h0000_0002;
+        start = 1'b1;
+        @(posedge clk);
+        @(negedge clk);
+        start = 1'b0;
+        repeat(50) @(posedge clk);
 
         $finish;
     end
