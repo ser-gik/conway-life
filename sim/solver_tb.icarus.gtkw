@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
-[*] Sun Oct 04 03:16:10 2020
+[*] Sun Oct 04 21:52:31 2020
 [*]
 [dumpfile] "C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\.dvb-build\simulation\solver-icarus\dump.fst"
-[dumpfile_mtime] "Sun Oct 04 03:14:01 2020"
-[dumpfile_size] 10945
+[dumpfile_mtime] "Sun Oct 04 21:48:11 2020"
+[dumpfile_size] 10966
 [savefile] "C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\sim\solver_tb.icarus.gtkw"
 [timestart] 0
 [size] 1920 1017
 [pos] -1 -1
-*-18.058033 914000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-18.058033 1466000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top_wrapper.
 [treeopen] top_wrapper.solver_tb_instance.
 [treeopen] top_wrapper.solver_tb_instance.uut.
@@ -31,7 +31,7 @@ top_wrapper.solver_tb_instance.reset
 top_wrapper.solver_tb_instance.start
 @1401200
 -TB
-@800208
+@800200
 -RAM
 @28
 top_wrapper.solver_tb_instance.u_arena.\RAM[0][9:0]
@@ -44,7 +44,7 @@ top_wrapper.solver_tb_instance.u_arena.\RAM[6][9:0]
 top_wrapper.solver_tb_instance.u_arena.\RAM[7][9:0]
 top_wrapper.solver_tb_instance.u_arena.\RAM[8][9:0]
 top_wrapper.solver_tb_instance.u_arena.\RAM[9][9:0]
-@1000208
+@1000200
 -RAM
 @800200
 -UUT
@@ -57,7 +57,7 @@ top_wrapper.solver_tb_instance.uut.start
 top_wrapper.solver_tb_instance.uut.ready
 @22
 top_wrapper.solver_tb_instance.uut.generations_count[31:0]
-top_wrapper.solver_tb_instance.uut.arena_row_select[7:0]
+top_wrapper.solver_tb_instance.uut.arena_row_select[9:0]
 top_wrapper.solver_tb_instance.uut.arena_columns[9:0]
 top_wrapper.solver_tb_instance.uut.arena_columns_new[9:0]
 @28
@@ -72,14 +72,15 @@ top_wrapper.solver_tb_instance.uut.row_next[9:0]
 top_wrapper.solver_tb_instance.uut.row_cur_new[9:0]
 top_wrapper.solver_tb_instance.uut.row_0_orig[9:0]
 top_wrapper.solver_tb_instance.uut.row_0_orig_next[9:0]
-top_wrapper.solver_tb_instance.uut.row_cur_idx[7:0]
-top_wrapper.solver_tb_instance.uut.row_cur_idx_next[7:0]
-top_wrapper.solver_tb_instance.uut.row_select[7:0]
+top_wrapper.solver_tb_instance.uut.row_cur_idx[9:0]
+@23
+top_wrapper.solver_tb_instance.uut.row_cur_idx_next[9:0]
+@22
+top_wrapper.solver_tb_instance.uut.row_select[9:0]
 @200
 -Controller
-@29
-top_wrapper.solver_tb_instance.uut.ctrl_row_write
 @28
+top_wrapper.solver_tb_instance.uut.ctrl_row_write
 top_wrapper.solver_tb_instance.uut.ctrl_update_rows_queue
 top_wrapper.solver_tb_instance.uut.ctrl_use_row_0_orig_as_next
 @2028
@@ -87,7 +88,7 @@ top_wrapper.solver_tb_instance.uut.ctrl_use_row_0_orig_as_next
 top_wrapper.solver_tb_instance.uut.ctrl_row_select_mode[1:0]
 ^2 C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\sim\aliases\solver.state.alias
 top_wrapper.solver_tb_instance.uut.state[2:0]
-^2 C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\sim\aliases\solver.state.alias
+@28
 top_wrapper.solver_tb_instance.uut.state_next[2:0]
 @1000200
 -UUT

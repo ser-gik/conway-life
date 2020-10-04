@@ -10,8 +10,8 @@ module top #(
 
     // 1-cycle arena read port.
     input arena_rd_clk,
-    input [7:0] arena_rd_column,
-    input [7:0] arena_rd_row,
+    input [9:0] arena_rd_column,
+    input [9:0] arena_rd_row,
     output arena_rd_data_out,
 
     // control port
@@ -23,7 +23,7 @@ module top #(
 );
     wire [ARENA_WIDTH-1:0] arena_rd_columns;
 
-    wire [7:0] row_select;
+    wire [9:0] row_select;
     wire [ARENA_WIDTH-1:0] columns_new;
     wire columns_write;
 
@@ -47,20 +47,20 @@ module top #(
 
     wire [1:0] agent_select;
 
-    wire [7:0] row_select_idler;
+    wire [9:0] row_select_idler;
     wire [ARENA_WIDTH-1:0] columns_new_idler;
     wire columns_write_idler;
-    wire [7:0] row_select_solver;
+    wire [9:0] row_select_solver;
     wire [ARENA_WIDTH-1:0] columns_new_solver;
     wire columns_write_solver;
-    wire [7:0] row_select_cell_reader;
+    wire [9:0] row_select_cell_reader;
     wire [ARENA_WIDTH-1:0] columns_new_cell_reader;
     wire columns_write_cell_reader;
-    wire [7:0] row_select_seeder;
+    wire [9:0] row_select_seeder;
     wire [ARENA_WIDTH-1:0] columns_new_seeder;
     wire columns_write_seeder;
 
-    mux_4x1 #(.WIDTH(8)) u_mux_row_select (
+    mux_4x1 #(.WIDTH(10)) u_mux_row_select (
         .select(agent_select),
         .in0(row_select_idler),
         .in1(row_select_solver),
@@ -132,8 +132,8 @@ module top #(
         .reset(reset),
         .start(start_cell_reader),
         .ready(ready_cell_reader),
-        .cell_column(cmd_arg0[15:8]),
-        .cell_row(cmd_arg0[7:0]),
+        .cell_column(cmd_arg0[19:10]),
+        .cell_row(cmd_arg0[9:0]),
         .cell_value(cell_reader_cell_value),
         .arena_row_select(row_select_cell_reader),
         .arena_columns(columns)

@@ -11,12 +11,12 @@ module seeder #(
 
     input [31:0] seed,
 
-    output [7:0] arena_row_select,
+    output [9:0] arena_row_select,
     output [ARENA_WIDTH-1:0] arena_columns_new,
     output arena_columns_write
 );
-    localparam [7:0] MAX_COLUMN = ARENA_WIDTH - 1;
-    localparam [7:0] MAX_ROW = ARENA_HEIGHT - 1;
+    localparam [9:0] MAX_COLUMN = ARENA_WIDTH - 1;
+    localparam [9:0] MAX_ROW = ARENA_HEIGHT - 1;
 
     localparam [1:0] IDLE = 2'b00;
     localparam [1:0] LOADED = 2'b01;
@@ -28,10 +28,10 @@ module seeder #(
     reg [31:0] lfsr;
     reg [31:0] lfsr_next;
     reg [ARENA_WIDTH-1:0] columns_seed;
-    reg [7:0] cur_row;
-    reg [7:0] cur_row_next;
-    reg [7:0] cur_column;
-    reg [7:0] cur_column_next;
+    reg [9:0] cur_row;
+    reg [9:0] cur_row_next;
+    reg [9:0] cur_column;
+    reg [9:0] cur_column_next;
     reg row_write;
 
     always @(*) begin
@@ -55,8 +55,8 @@ module seeder #(
             end
             LOADED: begin
                 state_next = RUNNING;
-                cur_row_next = 8'b0;
-                cur_column_next = 8'b0;
+                cur_row_next = 10'b0;
+                cur_column_next = 10'b0;
             end
             RUNNING: begin
                 state_next = RUNNING;
@@ -66,7 +66,7 @@ module seeder #(
                         state_next = IDLE;
                     end
                     else begin
-                        cur_column_next = 8'b0;
+                        cur_column_next = 10'b0;
                         cur_row_next = cur_row + 1'b1;
                     end
                 end
@@ -103,7 +103,7 @@ module seeder #(
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            cur_row <= 8'b0;
+            cur_row <= 10'b0;
         end
         else begin
             cur_row <= cur_row_next;
@@ -112,7 +112,7 @@ module seeder #(
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            cur_column <= 8'b0;
+            cur_column <= 10'b0;
         end
         else begin
             cur_column <= cur_column_next;

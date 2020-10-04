@@ -18,7 +18,7 @@ module solver_tb;
 
     reg reset;
 
-    wire [7:0] arena_row_select;
+    wire [9:0] arena_row_select;
     wire [9:0] arena_columns;
     wire [9:0] arena_columns_new;
     wire arena_write;
@@ -28,7 +28,7 @@ module solver_tb;
         .HEIGHT(ARENA_HEIGHT)
     ) u_arena (
         .a_clk(1'b0),
-        .a_row(8'b0),
+        .a_row(10'b0),
         .a_columns_out(),
         .b_clk(clk),
         .b_row(arena_row_select),

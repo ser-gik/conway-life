@@ -11,7 +11,7 @@ module solver #(
 
     input [31:0] generations_count,
 
-    output [7:0] arena_row_select,
+    output [9:0] arena_row_select,
     input [ARENA_WIDTH-1:0] arena_columns,
     output [ARENA_WIDTH-1:0] arena_columns_new,
     output arena_columns_write
@@ -104,12 +104,12 @@ module solver #(
     assign row_next = ctrl_use_row_0_orig_as_next ? row_0_orig : arena_columns;
 
     // Index of a row that is "current"
-    reg [7:0] row_cur_idx;
-    reg [7:0] row_cur_idx_next;
+    reg [9:0] row_cur_idx;
+    reg [9:0] row_cur_idx_next;
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
-            row_cur_idx <= {8{1'b0}};
+            row_cur_idx <= {10{1'b0}};
         end
         else begin
             row_cur_idx <= row_cur_idx_next;
@@ -117,26 +117,26 @@ module solver #(
     end
 
     // Row index for arena operation.
-    reg [7:0] row_select;
+    reg [9:0] row_select;
     reg [1:0] ctrl_row_select_mode;
 
     localparam [1:0] ROW_SELECT_CUR = 2'b00; 
     localparam [1:0] ROW_SELECT_PREV = 2'b01; 
     localparam [1:0] ROW_SELECT_NEXT = 2'b10; 
 
-    localparam [7:0] LAST_ROW_IDX = ARENA_HEIGHT - 1;
+    localparam [9:0] LAST_ROW_IDX = ARENA_HEIGHT - 1;
 
     always @(*) begin
-        row_select = {8{1'bx}};
+        row_select = {10{1'bx}};
         case (ctrl_row_select_mode)
             ROW_SELECT_CUR: begin
                 row_select = row_cur_idx; 
             end
             ROW_SELECT_PREV: begin
-                row_select = row_cur_idx == 8'b0000000 ? LAST_ROW_IDX : row_cur_idx - 1'b1; 
+                row_select = row_cur_idx == 10'd0 ? LAST_ROW_IDX : row_cur_idx - 1'b1; 
             end
             ROW_SELECT_NEXT: begin
-                row_select = row_cur_idx == LAST_ROW_IDX ? 8'b00000000 : row_cur_idx + 1'b1; 
+                row_select = row_cur_idx == LAST_ROW_IDX ? 10'd0 : row_cur_idx + 1'b1; 
             end
         endcase
     end
@@ -192,7 +192,7 @@ module solver #(
             IDLE: begin
                 if (start && generations_count != 32'd0) begin
                     remaining_gen_count_next = generations_count;
-                    row_cur_idx_next = 8'b0;
+                    row_cur_idx_next = 10'd0;
                     state_next = READ_ROW_LAST;
                 end
             end
@@ -222,7 +222,7 @@ module solver #(
                     end
                     else begin
                         remaining_gen_count_next = remaining_gen_count - 1'b1;
-                        row_cur_idx_next = 8'b0;
+                        row_cur_idx_next = 10'd0;
                         state_next = READ_ROW_LAST;
                     end
                 end

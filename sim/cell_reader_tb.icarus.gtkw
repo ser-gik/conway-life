@@ -1,52 +1,23 @@
 [*]
 [*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
-[*] Mon Sep 28 05:22:30 2020
+[*] Sun Oct 04 21:45:30 2020
 [*]
 [dumpfile] "C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\.dvb-build\simulation\cell_reader-icarus\dump.fst"
-[dumpfile_mtime] "Mon Sep 28 05:21:09 2020"
-[dumpfile_size] 1620
+[dumpfile_mtime] "Sun Oct 04 21:45:12 2020"
+[dumpfile_size] 1391
 [savefile] "C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\sim\cell_reader_tb.icarus.gtkw"
-[timestart] 86100
-[size] 1366 705
+[timestart] 0
+[size] 1920 1017
 [pos] -1 -1
-*-14.211979 112190 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-15.322717 120000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top_wrapper.
 [treeopen] top_wrapper.cell_reader_tb_instance.
 [treeopen] top_wrapper.cell_reader_tb_instance.u_arena.
 [treeopen] top_wrapper.cell_reader_tb_instance.uut.
 [sst_width] 265
-[signals_width] 306
+[signals_width] 422
 [sst_expanded] 1
-[sst_vpaned_height] 277
-@28
-top_wrapper.cell_reader_tb_instance.uut.clk
-top_wrapper.cell_reader_tb_instance.uut.reset
-top_wrapper.cell_reader_tb_instance.uut.start
-top_wrapper.cell_reader_tb_instance.uut.ready
-@22
-top_wrapper.cell_reader_tb_instance.uut.cell_column[7:0]
-top_wrapper.cell_reader_tb_instance.uut.cell_row[7:0]
-@28
-top_wrapper.cell_reader_tb_instance.uut.cell_value
-@29
-top_wrapper.cell_reader_tb_instance.cell_registered
-@c00022
-top_wrapper.cell_reader_tb_instance.uut.arena_row_select[7:0]
-@28
-(0)top_wrapper.cell_reader_tb_instance.uut.arena_row_select[7:0]
-(1)top_wrapper.cell_reader_tb_instance.uut.arena_row_select[7:0]
-(2)top_wrapper.cell_reader_tb_instance.uut.arena_row_select[7:0]
-(3)top_wrapper.cell_reader_tb_instance.uut.arena_row_select[7:0]
-(4)top_wrapper.cell_reader_tb_instance.uut.arena_row_select[7:0]
-(5)top_wrapper.cell_reader_tb_instance.uut.arena_row_select[7:0]
-(6)top_wrapper.cell_reader_tb_instance.uut.arena_row_select[7:0]
-(7)top_wrapper.cell_reader_tb_instance.uut.arena_row_select[7:0]
-@1401200
--group_end
-@22
-top_wrapper.cell_reader_tb_instance.uut.arena_columns[9:0]
-@200
--
+[sst_vpaned_height] 437
 @22
 top_wrapper.cell_reader_tb_instance.u_arena.\RAM[0][9:0]
 top_wrapper.cell_reader_tb_instance.u_arena.\RAM[1][9:0]
@@ -58,5 +29,20 @@ top_wrapper.cell_reader_tb_instance.u_arena.\RAM[6][9:0]
 top_wrapper.cell_reader_tb_instance.u_arena.\RAM[7][9:0]
 top_wrapper.cell_reader_tb_instance.u_arena.\RAM[8][9:0]
 top_wrapper.cell_reader_tb_instance.u_arena.\RAM[9][9:0]
+@200
+-
+@28
+top_wrapper.cell_reader_tb_instance.uut.clk
+top_wrapper.cell_reader_tb_instance.uut.reset
+top_wrapper.cell_reader_tb_instance.uut.start
+top_wrapper.cell_reader_tb_instance.uut.ready
+@22
+top_wrapper.cell_reader_tb_instance.uut.cell_column[9:0]
+top_wrapper.cell_reader_tb_instance.uut.cell_row[9:0]
+@28
+top_wrapper.cell_reader_tb_instance.uut.cell_value
+@22
+top_wrapper.cell_reader_tb_instance.uut.arena_columns[9:0]
+top_wrapper.cell_reader_tb_instance.uut.arena_row_select[9:0]
 [pattern_trace] 1
 [pattern_trace] 0

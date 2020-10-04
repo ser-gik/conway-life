@@ -18,9 +18,9 @@
                                    // arg0 - number of generations
                                    // res - undefined
 `define CMD_READ_CELL       3'b010 // Read value of a given arena cell
-                                   // arg0 - bits 31:16 - ignored
-                                   //        bits 15:8  - cell column number
-                                   //        bits 7:0   - cell row number
+                                   // arg0 - bits 31:20 - ignored
+                                   //        bits 19:10  - cell column number
+                                   //        bits 9:0   - cell row number
                                    // res - 31'b1 if cell is alive, 32'b0 if cell is dead.
 `define CMD_SEED            3'b011 // Initialize arena cells with a pseudorandom pattern.
                                    // arg0 - seed

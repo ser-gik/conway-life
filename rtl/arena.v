@@ -4,11 +4,11 @@ module arena #(
     parameter HEIGHT = 10
 )(
     input a_clk,
-    input [7:0] a_row,
+    input [9:0] a_row,
     output [WIDTH-1:0] a_columns_out,
 
     input b_clk,
-    input [7:0] b_row,
+    input [9:0] b_row,
     input [WIDTH-1:0] b_columns_in,
     output [WIDTH-1:0] b_columns_out,
     input b_write

@@ -12,7 +12,7 @@ module seeder_tb;
     initial clk = 1'b0;
     always #(CLK_PERIOD / 2) clk = ~clk;
 
-    wire [7:0] arena_row_select;
+    wire [9:0] arena_row_select;
     wire [ARENA_WIDTH-1:0] arena_columns_new;
     wire arena_write;
 
@@ -21,7 +21,7 @@ module seeder_tb;
         .HEIGHT(ARENA_HEIGHT)
     ) u_arena (
         .a_clk(1'b0),
-        .a_row(8'b0),
+        .a_row(10'b0),
         .a_columns_out(),
         .b_clk(clk),
         .b_row(arena_row_select),

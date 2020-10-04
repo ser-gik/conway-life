@@ -18,7 +18,7 @@ module cell_reader_tb;
 
     reg reset;
 
-    wire [7:0] arena_row_select;
+    wire [9:0] arena_row_select;
     wire [9:0] arena_columns;
 
     arena #(
@@ -26,7 +26,7 @@ module cell_reader_tb;
         .HEIGHT(ARENA_HEIGHT)
     ) u_arena (
         .a_clk(1'b0),
-        .a_row(8'b0),
+        .a_row(10'b0),
         .a_columns_out(),
         .b_clk(clk),
         .b_row(arena_row_select),
@@ -37,8 +37,8 @@ module cell_reader_tb;
 
     reg start;
     wire ready;
-    reg [7:0] cell_column;
-    reg [7:0] cell_row;
+    reg [9:0] cell_column;
+    reg [9:0] cell_row;
     wire cell_value;
 
     reg cell_registered;
@@ -65,22 +65,22 @@ module cell_reader_tb;
     integer i;
 
     initial begin
-        $readmemb({memories_directory, "/arena_10x10.mem"}, u_arena.RAM);
+        $readmemb({memories_directory, "/arena_0_10x10.mem"}, u_arena.RAM);
 
         reset = 1'b1;
         start = 1'b0;
         @(posedge clk);
         reset = 1'b0;
 
-        cell_column = 8'd3;
-        cell_row = 8'd0;
+        cell_column = 10'd3;
+        cell_row = 10'd0;
         for (i = 0; i < 10; i = i + 1) begin
             @(posedge clk);
             start = 1'b1;
             @(posedge clk);
             start = 1'b0;
             repeat(4) @(posedge clk);
-            cell_row = cell_row + 8'd1;
+            cell_row = cell_row + 1'd1;
         end
 
         $finish;

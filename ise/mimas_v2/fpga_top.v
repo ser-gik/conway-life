@@ -19,8 +19,9 @@ module fpga_top (
     output [2:0] Green,
     output [2:1] Blue
 );
-    localparam ARENA_WIDTH = 160;
-    localparam ARENA_HEIGHT = 90;
+    localparam ARENA_WIDTH = 320;
+    localparam ARENA_HEIGHT = 180;
+    localparam CELL_SIZE_LEVEL = 2;
 
     wire clk;
     wire vga_clk;
@@ -35,13 +36,14 @@ module fpga_top (
     assign reset = ~Switch[0];
 
     wire arena_clk;
-    wire [7:0] arena_row;
-    wire [7:0] arena_column;
+    wire [9:0] arena_row;
+    wire [9:0] arena_column;
     wire arena_cell;
 
     vga_image #(
         .ARENA_WIDTH(ARENA_WIDTH),
-        .ARENA_HEIGHT(ARENA_HEIGHT)
+        .ARENA_HEIGHT(ARENA_HEIGHT),
+        .CELL_SIZE_LEVEL(CELL_SIZE_LEVEL)
     ) u_vga_image (
         .clk(vga_clk),
         .reset(reset),

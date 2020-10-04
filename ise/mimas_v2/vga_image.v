@@ -1,7 +1,8 @@
 
 module vga_image #(
     parameter ARENA_WIDTH = 10,
-    parameter ARENA_HEIGHT = 10
+    parameter ARENA_HEIGHT = 10,
+    parameter CELL_SIZE_LEVEL = 3
 )(
     input clk,
     input reset,
@@ -9,8 +10,8 @@ module vga_image #(
     input grid_enable,
 
     output arena_clk,
-    output [7:0] arena_row_select,
-    output [7:0] arena_column_select,
+    output [9:0] arena_row_select,
+    output [9:0] arena_column_select,
     input arena_cell_value,
 
     output HSync,
@@ -54,9 +55,9 @@ module vga_image #(
         VSync <= vsync_raw;
     end
 
-    // Each cell is drawn as a 8x8 pixels square
-    assign arena_column_select = pixel_x[10:3];
-    assign arena_row_select = {1'b0, pixel_y[9:3]};
+    // Each cell is drawn as a ?x? pixels square
+    assign arena_column_select = {{CELL_SIZE_LEVEL-1{1'b0}}, pixel_x[10:CELL_SIZE_LEVEL]};
+    assign arena_row_select = {{CELL_SIZE_LEVEL{1'b0}}, pixel_y[9:CELL_SIZE_LEVEL]};
 
     wire is_arena;
     assign is_arena = pixel_visible
@@ -65,7 +66,8 @@ module vga_image #(
 
     wire is_grid;
     // 1-pixel wide grid lines
-    assign is_grid = pixel_x[2:0] == 3'b000 || pixel_y[2:0] == 3'b000;
+    assign is_grid = pixel_x[CELL_SIZE_LEVEL-1:0] == {CELL_SIZE_LEVEL{1'b0}}
+                    || pixel_y[CELL_SIZE_LEVEL-1:0] == {CELL_SIZE_LEVEL{1'b0}};
 
     reg [7:0] RGB_332;
     reg [7:0] RGB_332_next;

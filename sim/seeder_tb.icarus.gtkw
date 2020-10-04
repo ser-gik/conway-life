@@ -1,14 +1,14 @@
 [*]
 [*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
-[*] Tue Sep 29 03:09:16 2020
+[*] Sun Oct 04 21:48:00 2020
 [*]
 [dumpfile] "C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\.dvb-build\simulation\seeder-icarus\dump.fst"
-[dumpfile_mtime] "Tue Sep 29 03:08:37 2020"
-[dumpfile_size] 2297
+[dumpfile_mtime] "Sun Oct 04 21:45:56 2020"
+[dumpfile_size] 2342
 [savefile] "C:\Users\mgura\Desktop\xilinks_ise_files\conway_life\sim\seeder_tb.icarus.gtkw"
 [timestart] 0
 [size] 1920 1017
-[pos] -243 -243
+[pos] -1 -1
 *-18.442320 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top_wrapper.
 [treeopen] top_wrapper.seeder_tb_instance.
@@ -16,31 +16,6 @@
 [signals_width] 356
 [sst_expanded] 1
 [sst_vpaned_height] 300
-@28
-top_wrapper.seeder_tb_instance.uut.clk
-top_wrapper.seeder_tb_instance.uut.reset
-top_wrapper.seeder_tb_instance.uut.start
-top_wrapper.seeder_tb_instance.uut.ready
-@22
-top_wrapper.seeder_tb_instance.uut.seed[31:0]
-top_wrapper.seeder_tb_instance.uut.arena_row_select[7:0]
-top_wrapper.seeder_tb_instance.uut.arena_columns_new[47:0]
-@28
-top_wrapper.seeder_tb_instance.uut.arena_columns_write
-@22
-top_wrapper.seeder_tb_instance.uut.cur_column[7:0]
-top_wrapper.seeder_tb_instance.uut.cur_column_next[7:0]
-top_wrapper.seeder_tb_instance.uut.cur_row[7:0]
-top_wrapper.seeder_tb_instance.uut.cur_row_next[7:0]
-top_wrapper.seeder_tb_instance.uut.lfsr[31:0]
-@23
-top_wrapper.seeder_tb_instance.uut.lfsr_next[31:0]
-@28
-top_wrapper.seeder_tb_instance.uut.row_write
-top_wrapper.seeder_tb_instance.uut.state[1:0]
-top_wrapper.seeder_tb_instance.uut.state_next[1:0]
-@200
--
 @22
 top_wrapper.seeder_tb_instance.u_arena.\RAM[0][47:0]
 top_wrapper.seeder_tb_instance.u_arena.\RAM[1][47:0]
@@ -52,5 +27,31 @@ top_wrapper.seeder_tb_instance.u_arena.\RAM[6][47:0]
 top_wrapper.seeder_tb_instance.u_arena.\RAM[7][47:0]
 top_wrapper.seeder_tb_instance.u_arena.\RAM[8][47:0]
 top_wrapper.seeder_tb_instance.u_arena.\RAM[9][47:0]
+@200
+-
+@28
+top_wrapper.seeder_tb_instance.uut.clk
+top_wrapper.seeder_tb_instance.uut.reset
+top_wrapper.seeder_tb_instance.uut.start
+top_wrapper.seeder_tb_instance.uut.ready
+@22
+top_wrapper.seeder_tb_instance.uut.seed[31:0]
+top_wrapper.seeder_tb_instance.uut.arena_row_select[9:0]
+top_wrapper.seeder_tb_instance.uut.arena_columns_new[47:0]
+@28
+top_wrapper.seeder_tb_instance.uut.arena_columns_write
+@29
+top_wrapper.seeder_tb_instance.uut.row_write
+@22
+top_wrapper.seeder_tb_instance.uut.cur_column[9:0]
+top_wrapper.seeder_tb_instance.uut.cur_column_next[9:0]
+top_wrapper.seeder_tb_instance.uut.cur_row[9:0]
+top_wrapper.seeder_tb_instance.uut.cur_row_next[9:0]
+top_wrapper.seeder_tb_instance.uut.columns_seed[47:0]
+top_wrapper.seeder_tb_instance.uut.lfsr[31:0]
+top_wrapper.seeder_tb_instance.uut.lfsr_next[31:0]
+@28
+top_wrapper.seeder_tb_instance.uut.state[1:0]
+top_wrapper.seeder_tb_instance.uut.state_next[1:0]
 [pattern_trace] 1
 [pattern_trace] 0

@@ -24,8 +24,8 @@ module top_tb;
         .reset(reset),
 
         .arena_rd_clk(1'b0),
-        .arena_rd_column(8'b0),
-        .arena_rd_row(8'b0),
+        .arena_rd_column(10'b0),
+        .arena_rd_row(10'b0),
         .arena_rd_data_out(),
 
         .cmd(cmd),
@@ -64,11 +64,12 @@ module top_tb;
         issue_command(`CMD_SEED, 32'hcafe_babe);
         issue_command(`CMD_SEED, 32'hbaad_f00d);
         issue_command(`CMD_ADVANCE, 32'h0000_0002);
-        issue_command(`CMD_READ_CELL, 32'h0000_0202);
-        issue_command(`CMD_READ_CELL, 32'h0000_0203);
-        issue_command(`CMD_READ_CELL, 32'h0000_0204);
-        issue_command(`CMD_READ_CELL, 32'h0000_0205);
-        issue_command(`CMD_READ_CELL, 32'h0000_0206);
+        issue_command(`CMD_READ_CELL, 32'b000000000000_0000000010_0000000001);
+        issue_command(`CMD_READ_CELL, 32'b000000000000_0000000010_0000000010);
+        issue_command(`CMD_READ_CELL, 32'b000000000000_0000000010_0000000011);
+        issue_command(`CMD_READ_CELL, 32'b000000000000_0000000010_0000000100);
+        issue_command(`CMD_READ_CELL, 32'b000000000000_0000000010_0000000101);
+        issue_command(`CMD_READ_CELL, 32'b000000000000_0000000010_0000000110);
 
         $finish;
     end
