@@ -56,23 +56,33 @@ module solver_tb;
         .arena_columns_write(arena_write)
     );
 
-    integer i;
-
-    initial begin
-        $readmemb({memories_directory, "/arena_10x10.mem"}, u_arena.RAM);
-
-        reset = 1'b1;
-        start = 1'b0;
+    task solve(
+        input [128*8:1] memory_name,
+        input [31:0] generations
+    );
+    begin
+        $readmemb(memory_name, u_arena.RAM);
         @(posedge clk);
-        reset = 1'b0;
-
-        generations_count = 32'h0000_0002;
+        generations_count = generations;
         start = 1'b1;
         @(posedge clk);
         @(negedge clk);
         start = 1'b0;
-        repeat(50) @(posedge clk);
+        wait(ready);
+        @(posedge clk);
+    end
+    endtask
 
+    initial begin
+        reset = 1'b1;
+        @(posedge clk);
+        @(negedge clk);
+        reset = 1'b0;
+
+        solve({memories_directory, "/arena_0_10x10.mem"}, 32'd1);
+        solve({memories_directory, "/arena_1_10x10.mem"}, 32'd1);
+        solve({memories_directory, "/arena_2_10x10.mem"}, 32'd10);
+        solve({memories_directory, "/arena_3_10x10.mem"}, 32'd5);
         $finish;
     end
 

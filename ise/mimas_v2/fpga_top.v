@@ -55,9 +55,21 @@ module fpga_top (
         .RGB_332({Red, Green, Blue})
     );
 
+    wire [2:0] cmd_gen;
+    wire [31:0] cmd_arg0_gen;
+    wire cmd_valid_gen;
+    wire [2:0] cmd_cont_gen;
+    wire [31:0] cmd_arg0_cont_gen;
+    wire cmd_valid_cont_gen;
+
     wire [2:0] cmd;
     wire [31:0] cmd_arg0;
     wire cmd_valid;
+
+    assign cmd_valid = cmd_valid_gen | cmd_valid_cont_gen;
+    assign cmd = cmd_valid_cont_gen ? cmd_cont_gen : cmd_gen;
+    assign cmd_arg0 = cmd_valid_cont_gen ? cmd_arg0_cont_gen : cmd_arg0_gen;
+
     wire cmd_ready;
 
     top #(
@@ -81,12 +93,21 @@ module fpga_top (
         .clk(clk),
         .reset(reset),
         .buttons(~Switch[4:1]),
-        .cmd(cmd),
-        .cmd_arg0(cmd_arg0),
-        .cmd_valid(cmd_valid)
+        .cmd(cmd_gen),
+        .cmd_arg0(cmd_arg0_gen),
+        .cmd_valid(cmd_valid_gen)
     );
 
-    assign LED = {7'b0, ~cmd_ready};
+    cont_cmd_gen u_cont_cmd_gen (
+        .clk(clk),
+        .reset(reset),
+        .switches(~DPSwitch[7:1]),
+        .cmd(cmd_cont_gen),
+        .cmd_arg0(cmd_arg0_cont_gen),
+        .cmd_valid(cmd_valid_cont_gen)
+    );
+
+    assign LED = {7'b1000000, ~cmd_ready};
     assign SevenSegment = 8'b11111111;
     assign SevenSegmentEnable = 3'b111;
 

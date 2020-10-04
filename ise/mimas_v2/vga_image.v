@@ -68,17 +68,22 @@ module vga_image #(
     assign is_grid = pixel_x[2:0] == 3'b000 || pixel_y[2:0] == 3'b000;
 
     reg [7:0] RGB_332;
+    reg [7:0] RGB_332_next;
 
     always @(*) begin
-        RGB_332 = 8'b000000;
+        RGB_332_next = 8'b000000;
         if (is_arena) begin
             if (grid_enable && is_grid) begin
-                RGB_332 = 8'b00011100;
+                RGB_332_next = 8'b00011100;
             end
             else if (arena_cell_value) begin
-                RGB_332 = 8'b00000011;
+                RGB_332_next = 8'b00000011;
             end
         end
+    end
+
+    always @(posedge clk) begin
+        RGB_332 <= RGB_332_next;
     end
 
 endmodule

@@ -71,7 +71,8 @@ module cmd_gen(
                 cmd_valid_reg = 1'b1;
             end
             4'b0100: begin
-                cmd_reg = `CMD_READ_CELL;
+                cmd_reg = `CMD_ADVANCE;
+                cmd_arg0_reg = 32'd1_000_000;
                 cmd_valid_reg = 1'b1;
             end
             4'b1000: begin
